@@ -1,0 +1,40 @@
+{
+  "name": "copy-code-location",
+  "displayName": "Copy Code Location",
+  "description": "Copy the active file's workspace-relative code location with line or line ranges.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pip12345/vscode-copy-code-location.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:copyCodeLocation.copy"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copyCodeLocation.copy",
+        "title": "Copy Code Location"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+shift+c",
+        "command": "copyCodeLocation.copy",
+        "when": "!isSessionsWindow && !terminalFocus"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0"
+  }
+}
